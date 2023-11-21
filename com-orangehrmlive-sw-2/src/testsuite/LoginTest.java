@@ -32,11 +32,11 @@ public class LoginTest extends BaseTest {
     //* Enter “admin123 password
     //* Click on ‘LOGIN’ button
     //* Verify the ‘Dashboard’ text is display
-    public void userSholdLoginSuccessfullyWithValidCredentials() {
+    public void userShouldLoginSuccessfullyWithValidCredentials() {
         driver.findElement(By.name("username")).sendKeys("Admin");
         driver.findElement(By.name("password")).sendKeys("admin123");
         driver.findElement(By.xpath("//button[@type='submit']")).click();
-        Assert.assertEquals("Dashboard", driver.findElement(By.xpath("//h6[text()='Dashboard']")).getText());
+        Assert.assertEquals("User should login successfully with valid credentials","Dashboard", driver.findElement(By.xpath("//h6[text()='Dashboard']")).getText());
     }
 
     @After
